@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="assets/game.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="jumbotron bg-dark text-center mr-2 ml-2"> <span class="text-light h2">Train Time!</span>
+        <p class="text-light h3"></p>
+    </div>
+    <div class="container p-0">
+        <nav class="navbar bg-light border"> <span class="navbar-brand mb-0 h1">Currrent Train Schedule</span> </nav>
+        <table class="table table-sm border">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frecuency</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id=tableBody></tbody>
+        </table>
+
+
+        <div class="container p-0">
+            <nav class="navbar bg-light border"> <span class="navbar-brand mb-0 h1">Add Train</span>
+            </nav>
+        </div>
+        <div class="container border">
+
+            <form>
+                <div class="form-group "> <label>Train Name</label> <input class="form-control" id="Trainname-input">
+                    <small class="form-text text-muted"></small> </div>
+                <div class="form-group"> <label>Destination</label> <input class="form-control" id="destination-input">
+                    <small class="form-text text-muted"></small> </div>
+                <div class="form-group"> <label>First Train Time</label> <input class="form-control"
+                        id=First-train-time> <small class="form-text text-muted"></small> </div>
+                <div class="form-group"> <label>Frequency in Minutes</label> <input class="form-control"
+                        id="frequency-input"> <small class="form-text text-muted"></small> </div>
+            </form>
+            <button type="button" class="btn btn-primary" id="add-user">Submit</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
