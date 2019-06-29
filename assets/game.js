@@ -58,6 +58,7 @@ database.ref().on("child_added", function (childSnapshot) {
 
   //need to get the next arrival and minutes away
   //first time
+  var firstTime = firstTrain;
   var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
   console.log(firstTimeConverted);
 
@@ -81,7 +82,7 @@ database.ref().on("child_added", function (childSnapshot) {
   console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
 
-  //to append the info to a new table row
+  // to append the info to a new table row
   var newRow = $("<tr>").append(
     $("<td>").text(trainName),
     $("<td>").text(traindestination),
