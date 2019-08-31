@@ -71,23 +71,24 @@ database.ref().on("child_added", function (childSnapshot) {
 
   // Time apart (remainder)
   var tRemainder = diffTime % frequency;
-  console.log(tRemainder);
+  console.log("TIME APART" + tRemainder);
 
-  // Minute Until Train
-  var tMinutesTillTrain = frequency - tRemainder;
-  console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+  // Minutes away
+  var tMinutesTillNextTrain = frequency - tRemainder;
+  console.log("MINUTES TILL NEXT TRAIN: " + tMinutesTillNextTrain);
 
   // Next Train
-  var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
-  console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+  var nextTrain = moment().add(tMinutesTillNextTrain, "minutes").format("hh:mm a");
+  console.log("ARRIVAL TIME: " + nextTrain);
 
 
   // to append the info to a new table row
   var newRow = $("<tr>").append(
     $("<td>").text(trainName),
     $("<td>").text(traindestination),
-    $("<td>").text(firstTrain),
-    $("<td>").text(frequency)
+    $("<td>").text(frequency),
+    $("<td>").text(nextTrain),
+    $("<td>").text(tMinutesTillNextTrain)
   );
 
   $("#train-table > tbody").append(newRow);
