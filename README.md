@@ -1,6 +1,8 @@
 # Train-Time-Update
 
-For this app you need to enter the name of a train, the destination, when the tarin starts Runnin and how often the train runs. This so that the app displays the minutes till the next arrival.
+This is a train schedule application. For this app you need to enter the name of a train, the destination, when the train starts running and how often the train runs. After that information is intered the app is going to calculate when the next train will arrive relative to the current time and the minutes away.
 
-Here is the link for the app:
-https://lidiabara7.github.io/Train-Time-Update/
+Users from different machines are able to view the same train times.
+
+this application was developed using HTML, CSS, and Javascrip. It incorporates Firebase to host arrival and departure data. The app retrieves and manipulates this information with Moment.js.
+  
